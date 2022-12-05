@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Peças Reprovadas</h1>
+
+    <div id="pecas"></div>
+    </br>
+    <h1>Total de Peças</h1>
+    <div id="pecas"></div>
+    <div id="aprovadas"></div>
+    <div id="reprovadas"></div>
+    <div id="total"></div>
+
+    <script>
+
+        let pecas1 = 0;
+        let pecas2 = 0;
+        let numero1 = 0;
+        let total = 0;
+        let resultado = "";
+
+        while (pecas1 < 2) {
+            numero1 = prompt("Digite o Número da Peça");
+            pecas2 = Number(prompt("Digite: 1 Aprovada / 2 Reprovada"));
+
+            if (pecas2 == 1) {
+                pecas1++;
+                total++;
+                document.getElementById("pecas").innerHTML += "Peças Aprovadas: " + numero1 + "</br>";
+            } else {
+                total++;
+                pecas2++;
+               document.getElementById("pecas").innerHTML += "Peças Reprovadas: " + numero1 + "</br>";
+            }
+        }
+        document.getElementById("total").innerHTML = "Total de Peças: " + total + "</br>";
+        document.getElementById("aprovadas").innerHTML = "Total de Peças Aprovadas: " + pecas1 + "</br>";
+        document.getE
+
+    </script>    
+</body>
+</html>

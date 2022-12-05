@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Recrutamento</h1>
+    <div id="recrutamento"></div>
+    <div id="media"></div>
+
+
+    <script>
+
+        let cadastro = 1;
+        let numCand = "";
+        let idadeCand = "";
+        let sexCand = "";
+        let expeCand = "";
+        let mediaCand = 0;
+        let masculino = 0;
+        let feminino = 0;
+        let idade = 0;
+        let candidato = "1";
+        let quantidade = 0;
+    
+
+        while (cadastro == 1){
+    
+            numCand = prompt("Digite o numero da inscrição:");
+            sexCand = prompt("Indique sua sexualidade: \n 1- Masculino 2- Feminino");
+            idadeCand = Number(prompt("Digite a sua idade: \n Requisito Minimo 18 anos!"));
+        }
+
+        if (sexCand === "1"){
+            masculino++;
+            sexCand = "Masculino";
+        } else if(sexCand === "2"){
+            feminino++;
+            sexCand = "Feminino"
+        }else{
+            alert("Sexo invalido.");
+        }
+
+        if(candidato != "2"){
+            expeCand = prompt("Digite se tem experiência profissional\n Sim/Não");
+
+            let candidato = "1";
+            if(idade != 0 ){
+                quantidade++;
+                idadeCand +=+ idade;
+                mediaCand = parseInt(idade/ quantidade);
+            }
+
+            if(candidato === "1"){
+                if(idadeCand >= 18 && expeCand == "Sim"){
+                    document.getElementById("recrutamento").innerHTML += "Número de Candidato: " + numCand + "</br>" + "Idade: " + idadeCand + "</br>" + "Sexo: " + sexCand +  "</br>" + "Experiência: " + expeCand + "</br></br>";
+
+                }
+                document.getElementById("media").innerHTML = "Idade Media : " + mediaCand + "</br>Quantidade de candidatos Totais: " + quantidade + "</br>Número de Candidatos: " + masculino + "</br>Número de Candidatas: " + feminino;
+
+            }else{
+                alert("Você nâo atende os requisitos");
+                cadastro = 1;
+            }
+
+        }
+         
+
+    </script>
+</body>
+
+</html>
